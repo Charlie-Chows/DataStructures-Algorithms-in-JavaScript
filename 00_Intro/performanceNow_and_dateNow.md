@@ -8,6 +8,7 @@
   ## `Date.now()`
   - Returns the number of milliseconds starts from since January 1, 1970 (Unix Epoch).
   - Has millisecond precision.
+  - Use Cases: General timestamp generation, date manipulation, simple time interval calculations.
   - Example usage:
     ```javascript
     var startDate = Date.now();
@@ -28,6 +29,7 @@
   ## `performance.now()`
   - Returns the number of milliseconds (with high precision) starts from since the page started loading.
   - Typically has microsecond precision.
+  - Use Cases: High-resolution timing, performance profiling, animation, and smooth scrolling.
   - Example usage:
     ```javascript
     var startPerf = performance.now();
