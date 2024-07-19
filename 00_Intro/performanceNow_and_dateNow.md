@@ -1,12 +1,12 @@
 # performance.now() & Date.now()
 
 <details>
-  <summary>What are performance.now() & Date.now()? What is the difference between them?</summary>
+  <summary>What are performance.now( )  &  Date.now( ) ? What is the difference between them ?</summary>
 
   `performance.now()` and `Date.now()` are both methods for measuring time, but they serve different purposes and have different precision.
 
   ## `Date.now()`
-  - Returns the number of milliseconds elapsed since January 1, 1970 (Unix Epoch).
+  - Returns the number of milliseconds starts from since January 1, 1970 (Unix Epoch).
   - Has millisecond precision.
   - Example usage:
     ```javascript
@@ -17,9 +17,16 @@
     console.log("Time taken using Date.now(): " + (endDate - startDate) + " milliseconds");
     console.log("endDate:", endDate);
     ```
+    ### Example Output
+  ```javascript
+      // Output for Date.now()
+      startDate: 1721413468589
+      Time taken using Date.now(): 0 milliseconds
+      endDate: 1721413468589
+  ```
 
   ## `performance.now()`
-  - Returns the number of milliseconds (with high precision) elapsed since the page started loading.
+  - Returns the number of milliseconds (with high precision) starts from since the page started loading.
   - Typically has microsecond precision.
   - Example usage:
     ```javascript
@@ -31,16 +38,11 @@
     console.log("endPerf:", endPerf);
     ```
 
-  ## Example Output
+  - Example Output
   ```javascript
-  // Output for Date.now()
-  startDate: 1721413468589
-  Time taken using Date.now(): 0 milliseconds
-  endDate: 1721413468589
-
-  // Output for performance.now()
-  startPerf: 5953343
-  Time taken using performance.now(): 0 milliseconds
-  endPerf: 5953343
+    // Output for performance.now()
+    startPerf: 5953343
+    Time taken using performance.now(): 0 milliseconds
+    endPerf: 5953343
  ```
 </details>
