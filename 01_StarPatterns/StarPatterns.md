@@ -45,6 +45,8 @@ squarePattern(5);
   </summary>
 
   ```javascript
+  // ITERATIVE APPROACH 
+
   function starPattern( n ) {
     for ( let row = 1; row <= n; row++ ){
         star = "";
@@ -60,6 +62,7 @@ squarePattern(5);
 ```
 
   ```javascript
+  // RECURSIVE APPROACH
   
 function printRow ( n ,row, col = 1 ){
     if ( col > row ){
@@ -99,6 +102,8 @@ starPattern ( 5 );
   </summary>
 
   ```javascript
+  // ITERATIVE APPROACH 
+
   function starPattern( n ) {
     for ( let row = 1; row <= n; row++ ){
        let result = "";
@@ -113,7 +118,7 @@ starPattern ( 5 );
 ```
 
   ```javascript
-  
+  // RECURSIVE APPROACH
 
 function printRow ( n ,row, col = 1 ){
     if ( col > row ){
@@ -152,6 +157,8 @@ starPattern ( 5 );
   </summary>
 
   ```javascript
+  // ITERATIVE APPROACH 
+
   function starPattern( n ) {
     for ( let row = 1; row <= n; row++ ){
        let result = "";
@@ -166,7 +173,7 @@ starPattern ( 5 );
 ```
 
   ```javascript
-  
+  // RECURSIVE APPROACH
 
 function printRow ( n ,row, col = 1 ){
     if ( col > row ){
@@ -203,6 +210,8 @@ starPattern ( 5 );
   </summary>
 
   ```javascript
+  // ITERATIVE APPROACH 
+
   function starPattern ( n ){
     for ( let row = 0; row < n; row++ ){
         let star = "";
@@ -218,7 +227,7 @@ starPattern ( 5 );
 ```
 
   ```javascript
-  
+  // RECURSIVE APPROACH
 
 function printRow( n, row, col = 0 ){
     if ( col >= n - row ){
@@ -243,7 +252,7 @@ starPattern ( 5 );
 
 
 
-## Pattern 5
+## Pattern 6
 
 <details>
   <summary>
@@ -257,6 +266,8 @@ starPattern ( 5 );
   </summary>
 
   ```javascript
+  // ITERATIVE APPROACH 
+
   function starPattern ( n ){
     for ( let row = 1; row <= n; row++ ){
         let star = "";
@@ -274,7 +285,7 @@ starPattern ( 5 );
 ```
 
   ```javascript
-  
+  // RECURSIVE APPROACH
 
 
 function printRow( n, row, col = 1 ){
@@ -300,7 +311,7 @@ starPattern ( 5 );
 
 
 
-## Pattern 5
+## Pattern 7
 
 <details>
   <summary>
@@ -314,6 +325,8 @@ starPattern ( 5 );
   </summary>
 
   ```javascript
+  // ITERATIVE APPROACH 
+
   function starPattern ( n ) {
     for ( let row = 1; row <= n; row++ ){
         let fullLine = "";
@@ -334,6 +347,7 @@ starPattern ( 5 );
 ```
 
   ```javascript
+  // RECURSIVE APPROACH
   
 function printRow(n, row, currentCharIndex = 1, fullLine = "") {
     if (currentCharIndex > 2 * n - 1) {
