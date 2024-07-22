@@ -2,7 +2,7 @@
 
 # Star Patterns
 
-## 1.Square Pattern
+## Pattern 1
 
 <details>
   <summary>
@@ -28,77 +28,342 @@
 
 squarePattern(5);
 ```
-### Explanation
-
-#### How it works:
-
-##### 1. The function name and input:
-   * The function is called squarePattern.
-   * It takes one input called num. This input tells us how many rows and columns the square will have. For example, if num is 5, the square will be 5 rows high and 5 columns wide.
-##### 2.The outer loop:
-   * This loop counts the rows. It starts at 1 and goes up to the number num.
-   * For each row, it does the following.
-##### 3.The inner loop:
-   * This loop counts the columns. It starts at 1 and goes up to the number num.
-   * It adds a star (*) followed by a space ( ) to a string called star.
-##### 4.Printing the stars:
-   * After the inner loop finishes, the star string contains a row of stars.
-   * This row is then printed out using console.log(star).
-
-### Execution
-#### Explanation of `squarePattern` Function
-
-##### 1. First Row (row = 1):
-* Start with an empty string: `star = ''`
-* Add 5 stars with spaces:
-  * `col = 1`: `star = '* '`
-  * `col = 2`: `star = '* * '`
-  * `col = 3`: `star = '* * * '`
-  * `col = 4`: `star = '* * * * '`
-  * `col = 5`: `star = '* * * * * '`
-* Print the row: `* * * * * ` Now it will print whole 5 stars in console, till now stars are appending to  star(variable name) string
-
-##### 2. Second Row (row = 2):
-* Start with an empty string: `star = ''`
-* Add 5 stars with spaces:
-  * `col = 1`: `star = '* '`
-  * `col = 2`: `star = '* * '`
-  * `col = 3`: `star = '* * * '`
-  * `col = 4`: `star = '* * * * '`
-  * `col = 5`: `star = '* * * * * '`
-* Print the row: `* * * * * `
-
-##### 3. Third Row (row = 3):
-* Start with an empty string: `star = ''`
-* Add 5 stars with spaces:
-  * `col = 1`: `star = '* '`
-  * `col = 2`: `star = '* * '`
-  * `col = 3`: `star = '* * * '`
-  * `col = 4`: `star = '* * * * '`
-  * `col = 5`: `star = '* * * * * '`
-* Print the row: `* * * * * `
-
-##### 4. Fourth Row (row = 4):
-* Start with an empty string: `star = ''`
-* Add 5 stars with spaces:
-  * `col = 1`: `star = '* '`
-  * `col = 2`: `star = '* * '`
-  * `col = 3`: `star = '* * * '`
-  * `col = 4`: `star = '* * * * '`
-  * `col = 5`: `star = '* * * * * '`
-* Print the row: `* * * * * `
-
-##### 5. Fifth Row (row = 5):
-* Start with an empty string: `star = ''`
-* Add 5 stars with spaces:
-  * `col = 1`: `star = '* '`
-  * `col = 2`: `star = '* * '`
-  * `col = 3`: `star = '* * * '`
-  * `col = 4`: `star = '* * * * '`
-  * `col = 5`: `star = '* * * * * '`
-* Print the row: `* * * * * `
-
-### Summary
-* Each time, the outer loop goes to the next row and the inner loop adds stars to that row until there are 5 stars. This repeats until all rows are printed, creating a 5x5 square of stars.
-
 </details>
+
+
+## Pattern 2 
+
+<details>
+  <summary>
+<pre>
+  *
+  * * 
+  * * * 
+  * * * * 
+  * * * * * 
+</pre>
+  </summary>
+
+  ```javascript
+  function starPattern( n ) {
+    for ( let row = 1; row <= n; row++ ){
+        star = "";
+        for( let col = 1; col <= row; col++ ){
+            star = star + "* ";
+        }
+    console.log( star );
+    }
+  }
+
+  starPattern ( 5 );
+
+```
+
+  ```javascript
+  
+function printRow ( n ,row, col = 1 ){
+    if ( col > row ){
+        return "";
+    }
+    return "* " + printRow( n,row, col + 1 );
+}
+
+function starPattern ( n , row = 1 ){
+    if ( row > n ){
+        return;
+    }
+    console.log( printRow( n,row ));
+    starPattern ( n , row + 1 );
+}
+
+starPattern ( 5 );
+
+
+
+```
+</details>
+
+
+
+## Pattern 3 
+
+<details>
+  <summary>
+<pre>
+  1
+  1 2 
+  1 2 3 
+  1 2 3 4 
+  1 2 3 4 5 
+</pre>
+  </summary>
+
+  ```javascript
+  function starPattern( n ) {
+    for ( let row = 1; row <= n; row++ ){
+       let result = "";
+        for ( let col = 1; col <= row; col++ ){
+            result = result + col + " ";
+        }
+        console.log( result.trim() );
+    }
+  }
+  starPattern( 5 );
+
+```
+
+  ```javascript
+  
+
+function printRow ( n ,row, col = 1 ){
+    if ( col > row ){
+        return "";
+    }
+    return col + " " + printRow( n,row, col + 1 );
+}
+
+function starPattern ( n , row = 1 ){
+    if ( row > n ){
+        return;
+    }
+    console.log( printRow( n,row ));
+    starPattern ( n , row + 1 );
+}
+
+starPattern ( 5 );
+
+```
+</details>
+
+
+
+
+## Pattern 4 
+
+<details>
+  <summary>
+<pre>
+  1
+  2 2 
+  3 3 3 
+  4 4 4 4 
+  5 5 5 5 5 
+</pre>
+  </summary>
+
+  ```javascript
+  function starPattern( n ) {
+    for ( let row = 1; row <= n; row++ ){
+       let result = "";
+        for ( let col = 1; col <= row; col++ ){
+            result = result + row + " ";
+        }
+        console.log( result.trim() );
+    }
+  }
+  starPattern( 5 );
+
+```
+
+  ```javascript
+  
+
+function printRow ( n ,row, col = 1 ){
+    if ( col > row ){
+        return "";
+    }
+    return row + " " + printRow( n,row, col + 1 );
+}
+
+function starPattern ( n , row = 1 ){
+    if ( row > n ){
+        return;
+    }
+    console.log( printRow( n,row ));
+    starPattern ( n , row + 1 );
+}
+
+starPattern ( 5 );
+
+```
+</details>
+
+
+## Pattern 5
+
+<details>
+  <summary>
+<pre>
+  * * * * * 
+  * * * * 
+  * * *
+  * *  
+  * 
+</pre>
+  </summary>
+
+  ```javascript
+  function starPattern ( n ){
+    for ( let row = 0; row < n; row++ ){
+        let star = "";
+        for ( let col = 0; col < n - row; col++ ){
+            star = star + "* ";
+        }
+        console.log ( star );
+    }
+}
+
+starPattern ( 5 );
+
+```
+
+  ```javascript
+  
+
+function printRow( n, row, col = 0 ){
+    if ( col >= n - row ){
+        return "";
+    }
+    return "* " + printRow( n, row, col + 1 );
+}
+
+function starPattern ( n, row = 0 ){
+    if ( row >= n ){
+        return;
+    }
+    console.log( printRow( n ,row ));
+    starPattern(n,row + 1);
+}
+
+starPattern ( 5 );
+
+```
+</details>
+
+
+
+
+## Pattern 5
+
+<details>
+  <summary>
+<pre>
+  1 2 3 4 5 
+  1 2 3 4 
+  1 2 3
+  1 2 
+  1 
+</pre>
+  </summary>
+
+  ```javascript
+  function starPattern ( n ){
+    for ( let row = 1; row <= n; row++ ){
+        let star = "";
+        for ( let col = 1; col <= n - row + 1; col++ ){
+            star = star + col + " ";
+        }
+        console.log ( star );
+    }
+}
+
+starPattern ( 5 );
+
+
+
+```
+
+  ```javascript
+  
+
+
+function printRow( n, row, col = 1 ){
+    if ( col > n - row + 1 ){
+        return "";
+    }
+    return col + " " + printRow( n, row, col + 1 );
+}
+
+function starPattern ( n, row = 1 ){
+    if ( row > n ){
+        return;
+    }
+    console.log( printRow( n ,row ));
+    starPattern(n,row + 1);
+}
+
+starPattern ( 5 );
+
+```
+</details>
+
+
+
+
+## Pattern 5
+
+<details>
+  <summary>
+<pre>
+          *
+        * * *
+      * * * * *
+    * * * * * * *
+  * * * * * * * * *
+</pre>
+  </summary>
+
+  ```javascript
+  function starPattern ( n ) {
+    for ( let row = 1; row <= n; row++ ){
+        let fullLine = "";
+        for ( let space = n-row ; space > 0 ; space-- ){
+            fullLine += "$";
+        }
+        for ( let star = 1; star <= row * 2 - 1; star++ ){
+            fullLine += "*";
+        }
+        for (let space = n-row ; space > 0; space-- ){
+            fullLine += "$";
+        }
+        console.log( fullLine );
+    }
+}
+
+starPattern ( 5 );
+```
+
+  ```javascript
+  
+function printRow(n, row, currentCharIndex = 1, fullLine = "") {
+    if (currentCharIndex > 2 * n - 1) {
+        console.log(fullLine);
+        return;
+    }
+
+    if (currentCharIndex <= n - row || currentCharIndex > n + row - 1) {
+        fullLine += "$";
+    } else {
+        fullLine += "*";
+    }
+
+    printRow(n, row, currentCharIndex + 1, fullLine);
+}
+
+function starPattern(n, row = 1) {
+    if (row > n) {
+        return;
+    }
+
+    printRow(n, row);
+    starPattern(n, row + 1);
+}
+
+starPattern(5);
+
+
+```
+</details>
+
+
+
