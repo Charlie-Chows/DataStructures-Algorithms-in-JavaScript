@@ -1,4 +1,4 @@
-
+// GFG : https://www.geeksforgeeks.org/problems/second-largest3735/1
 
 // BRUTE FORCE - O ( NlogN ) + N = O ( NlogN )
 function secondlargestBrute ( arr ,n  ) {
@@ -25,6 +25,9 @@ function secondlargestOptimal ( arr ,n ) {
        if ( arr[i] > largest ) {
         second_Largest = largest;
         largest = arr[i];
+       }
+       else if ( arr [i] > second_Largest && arr[i] !== largest){
+        second_Largest = arr[i];
        }
     }
     return second_Largest;
