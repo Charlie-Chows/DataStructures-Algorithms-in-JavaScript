@@ -1,6 +1,7 @@
 // Moving Zeroes to end 
 
 // Problem link : https://leetcode.com/problems/move-zeroes/
+// difficuly : easy 
 
 var moveZeroes = function(nums) {
     if (nums.length === 1 ){
