@@ -28,13 +28,13 @@ function RearrangebySign(A, n) {
   }
   
   // Define an array and call the RearrangebySign function.
-  let A = [1, 2, -4, -5];
-  let n = A.length;
+  let A1 = [1, 2, -4, -5];
+  let n = A1.length;
   
-  let ans = RearrangebySign(A, n);
+  let ans1 = RearrangebySign(A, n);
   
   // Print the result.
-  console.log(ans.join(" "));
+  console.log(ans1.join(" "));
 
 
 // OPtimal - O ( N ) SC : O ( N )
@@ -67,9 +67,9 @@ function RearrangebySign(A) {
   }
   
   // Define an array and call the RearrangebySign function.
-  let A = [1, 2, -4, -5];
+  let A2 = [1, 2, -4, -5];
   
-  let ans = RearrangebySign(A);
+  let ans2 = RearrangebySign(A);
   
   // Print the result.
   console.log(ans.join(" "));
