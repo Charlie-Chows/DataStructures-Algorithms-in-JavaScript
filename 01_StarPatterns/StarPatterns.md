@@ -16,17 +16,19 @@
   </summary>
 
   ```javascript
-  function squarePattern ( num ) {
-    for ( let row = 1; row <= num; row++ ) {
-        let star = '';
-        for ( let col = 1; col <= num; col++ ) {
+  TC : O ( N ^ 2 )
+  
+  function pattern ( n ) {
+    for ( let i = 0; i < n; i++ ) {
+        let star = "";
+        for ( let j = 0; j < n; j++ ) {
             star = star + "* ";
         }
-    console.log(star);
+        console.log( star );
     }
-}
+  }
 
-squarePattern(5);
+  pattern( 5 );
 ```
 </details>
 
