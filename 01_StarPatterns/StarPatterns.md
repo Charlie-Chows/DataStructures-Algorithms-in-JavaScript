@@ -700,10 +700,6 @@ pattern ( 5 );
 ```
 </details>
 
-
-
-
-
 ## Pattern 19
 
 <details>
@@ -762,12 +758,6 @@ pattern ( 5 );
 ```
 </details>
 
-
-
-
-
-
-
 ## Pattern 20
 
 <details>
@@ -804,6 +794,73 @@ pattern ( 5 );
 
 ```
 </details>
+
+
+
+
+
+
+
+
+
+
+# QUIZ 
+
+<details>
+  <summary>
+<pre>
+ 
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+</pre>
+  </summary>
+
+  ```javascript
+  TC : O ( N ^ 2 )
+
+function pattern ( n ) {
+    for ( let i = 1; i <= 2*n - 1; i++ ) {
+        let row = "";
+        if ( i <= n ) {
+            for ( let j = 0; j < i - 1; j++ ) {
+                row += " ";
+            }
+            for ( let k = 1; k <= 2*n - 2*i + 1; k++ ) {
+                row += "*";
+            }
+            for ( let j = 0; j < i - 1; j++ ) {
+                row += " ";
+            }
+        }
+        else {
+             for ( let j = 1; j <= 2*n - i - 1; j++ ) {
+                 row += " ";
+             }
+            for ( let k = 1; k <= 2*( i - n ) + 1; k++ ) {
+                row += "*";
+            }
+             for ( let j = 1; j <= 2*n - i - 1; j++ ) {
+                 row += " ";
+             }
+            }
+        console.log( row );
+        
+    }
+ }
+
+ pattern ( 5 );
+
+```
+</details>
+
+
 
 
 
