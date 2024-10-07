@@ -572,13 +572,13 @@ pattern ( 5 );
 <details>
   <summary>
 <pre>
-
+```
      A    
     ABA   
    ABCBA  
   ABCDCBA 
  ABCDEDCBA
-
+```
 </pre>
   </summary>
 
@@ -621,7 +621,7 @@ pattern ( 5 );
 <details>
   <summary>
 <pre>
-
+```
 **********
 ****  ****
 ***    ***
@@ -632,7 +632,7 @@ pattern ( 5 );
 ***    ***
 ****  ****
 **********
-
+```
 </pre>
   </summary>
 
@@ -710,6 +710,7 @@ pattern ( 5 );
   <summary>
 <pre>
 
+```
 *--------*
 **------**
 ***----***
@@ -719,6 +720,7 @@ pattern ( 5 );
 ***----***
 **------**
 *--------*
+```
 
 </pre>
   </summary>
@@ -772,7 +774,6 @@ pattern ( 5 );
   <summary>
 <pre>
  *****
- *   *
  *   *
  *   *
  *   *
