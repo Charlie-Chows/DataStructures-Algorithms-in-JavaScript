@@ -2,7 +2,7 @@
 
 
 ## Array based Hashing
-```
+```javascript
   let numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4];
   let hash = new Array(10).fill(0);
 
