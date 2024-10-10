@@ -4,10 +4,9 @@
 
 | No. | Questions                                                                                                                                                                                                                        |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [Problem 1](#Problem-1)                                                                                                                                                                                                 |
-| 2   | [What is the history behind React evolution?](#What-is-the-history-behind-React-evolution)                                                                                                                                       |
-| 3   | [What are the major features of React?](#what-are-the-major-features-of-react)                                                                                                                                                   |
-| 4   | [What is JSX?](#what-is-jsx)   
+| 1   | [Extraction of Digits](#Problem-1)                                                                                                                                                                                                 |
+| 2   | [Reverse a Number](#Problem-2)                                                                                                                                       |
+| 3   | [Count Number of Digits](#Problem-3)                                                                                                                                                   | 
 
 ## Problem 1 
 
