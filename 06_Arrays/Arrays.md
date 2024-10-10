@@ -39,6 +39,7 @@
 
   <details>
     <summary>Brute Force Approach</summary>
+    
     **Explanation**: Sort the array and return the last element.
 
     ```javascript
