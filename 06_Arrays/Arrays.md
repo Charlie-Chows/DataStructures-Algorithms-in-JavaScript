@@ -2,17 +2,18 @@
 # Arrays
 
 ## Table of contents
+| No. | Questions                               | Difficulty |
+|-----|-----------------------------------------|------------|
+|  1  | [How to iterate array](#how-to-iterate-array) | Basic     |
 
-| No. | Questions | Difficulty |
-|  1  | [How to iterate array](#How-to-Iterate-Array) | Basic |
+
+
 
 
 ### How to Iterate Array 
 <details>
   <summary>
-<pre>
-    Code
-</pre>
+    Click to open code
   </summary>
 
   ```javascript
