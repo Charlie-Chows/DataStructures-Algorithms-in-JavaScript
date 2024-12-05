@@ -1,6 +1,6 @@
 
 
-// OPTIMAL - N
+// OPTIMAL -O ( N )
 function second_largest_in_array ( arr ) {
     if (arr.length < 2) {
         return "Array must have at least two distinct elements"; // Handle too few elements

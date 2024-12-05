@@ -1,5 +1,5 @@
 
-// BRUTE FORCE - N Log N
+// BRUTE FORCE -O ( N Log N )
 function largest_element_in_array(arr) {
 
     arr.sort((a, b) => b - a);
@@ -10,7 +10,7 @@ let arr2 = [-1, 0,1,15, -2,9];
 console.log(largest_element_in_array(arr2)); 
 
 
-// OPTIMAL - N
+// OPTIMAL - O ( N )
 function largest_element_in_array ( arr ) {
 
     let n = arr.length;

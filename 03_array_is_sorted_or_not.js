@@ -1,4 +1,5 @@
 
+// OPTIMAL - O ( N )
 function array_is_sorted_or_not ( arr ) {
 
     if ( arr.length === 0 ) {
