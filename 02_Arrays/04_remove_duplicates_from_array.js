@@ -1,4 +1,6 @@
 
+
+// TC : O( N )
 function remove_duplicates_from_sorted_array ( arr ) {
 
     if ( arr.length === 0 ) {
