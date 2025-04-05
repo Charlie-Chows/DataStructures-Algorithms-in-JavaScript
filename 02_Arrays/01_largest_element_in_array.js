@@ -3,32 +3,36 @@
 // TC : O ( N )
 // SC : O ( 1 )
 
-function largest_element_in_array ( arr ) {
-    let largest_elem = -1;
-    for ( let i = 0; i < arr.length; i++ ) {
-        if ( arr[i] > largest_elem ) {
-            largest_elem = arr[i];
+function findLargestNumber ( nums ) {
+    if( nums.length === 0 ) return null;
+    if ( nums.length === 1 ) return nums[0];
+    
+    let max = nums[0];
+    for ( let i = 1; i < nums.length; i++ ) {
+        if ( nums[i] > max ) {
+            max = nums[i];
         }
     }
-    return largest_elem;
+    return max;
 }
-
-let arr = [ 3,2,1,5,2 ];
-console.log( largest_element_in_array( arr ) );
-
 
 
 // SMALLEST ELEMENT IN THE ARRAY 
 
-function smallest_element_in_array ( arr ) {
-    let smallest_elem = Infinity;
-    for ( let i = 0; i < arr.length; i++ ) {
-        if ( arr[i] < smallest_elem) {
-            smallest_elem = arr[i];
+function findSmallestNumber ( nums ) {
+    if ( nums.length === 0 ) return null;
+    if ( nums.length === 1 ) return nums[0];
+    
+    let min = nums[0];
+    for ( let i = 1; i < nums.length; i++ ) {
+        if ( nums[i] < min ) {
+            min = nums[i];
         }
     }
-    return smallest_elem;
+    return min;
 }
 
-let arr1 = [ 3,2,1,5,2 ];
-console.log( smallest_element_in_array( arr1 ) );
+let nums = [ 3,2,1,5,2 ];
+
+console.log( findLargestNumber( nums ) );   // 5
+console.log( findSmallestNumber( nums ) );  // 1 

@@ -4,6 +4,7 @@
 // TC : O ( N )
 // SC : O ( 1 )
 
+// hint : check peak , more than one peak return false
 function array_is_sorted_and_rotated ( arr ) {
     let count = 0;
     let n = arr.length;

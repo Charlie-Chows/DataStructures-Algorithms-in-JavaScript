@@ -6,17 +6,18 @@
 
 
 function kth_largest_element_in_array ( arr , k ) {
-    arr.sort((a,b) => a - b );
-    let count = 0;
-    for ( let i = arr.length - 1; i >= 0; i-- ) {
-        if ( arr[ i ] !== arr[i-1] ) {
-            count++
+    if ( nums.length === 0 ) return null;
+    nums.sort((a,b) => b - a );  // decending sort
+    let count = 1;  // 1st unique element
+    for ( let i = 1; i < nums.length; i++ ) {
+        if ( nums[i] !== nums[i-1] ) {
+            count++;
         }
         if ( count === k ) {
-            return arr[ i ];
+            return nums[i];
         }
     }
-    return -1
+    return -1;
 }
 
 let arr = [7, 7, 6, 6, 5, 4, 3, 2, 1]

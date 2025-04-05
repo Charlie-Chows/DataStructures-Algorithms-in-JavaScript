@@ -5,17 +5,18 @@
 // OPTIMAL
 // TC : O ( N )
 // SC : O ( 1 )
-function remove_duplicates_from_sorted_array ( arr ) {
+function removeDuplicatesFromSortedArray ( nums ) {
+    if ( nums.length === 0 ) return null;
     let i = 0;
-    for ( let j = 1; j < arr.length; j++ ) {
-        if ( arr[i] !== arr[j] ) {
+    for ( let j = 1; j < nums.length; j++ ) {
+        if ( nums[i] !== nums[j] ) {
             i++;
-            arr[i] = arr[j];
+            nums[i] = nums[j];
         }
     }
     return i + 1;
 }
 
-let arr = [ 1, 1, 2, 2, 2, 3, 3 ];
-console.log( remove_duplicates_from_sorted_array ( arr ) );
+let nums = [ 1, 1, 2, 2, 2, 3, 3 ];
+console.log( removeDuplicatesFromSortedArray ( nums ) );
 
